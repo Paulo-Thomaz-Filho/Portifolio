@@ -26,3 +26,18 @@
 a {
     text-decoration: none;
 }
+
+@keyframes rolarCarrossel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animacao-carrossel {
+    display: flex;
+    width: max-content;
+    animation: rolarCarrossel 15s linear infinite;
+}
+
+.animacao-carrossel:hover {
+    animation-play-state: paused;
+}
