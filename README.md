@@ -1,97 +1,60 @@
-👨‍💻 Portfólio - Paulo Thomaz Filho
+# 💼 Portfólio - Paulo Thomaz Filho
 
-Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minha trajetória profissional, minhas habilidades técnicas e os projetos (reais e de estudo) que venho desenvolvendo ao longo da minha carreira como Desenvolvedor Full-Stack.
+Bem-vindo ao repositório do meu Portfólio Pessoal! Este projeto foi desenvolvido para apresentar minhas habilidades, formação e os projetos (reais e de estudo) nos quais trabalhei. Sou um desenvolvedor full-stack com forte inclinação para as áreas de Infraestrutura e Back-end.
 
-🎯 Sobre Mim
+## 🚀 Tecnologias Utilizadas
 
-Sou um desenvolvedor full-stack apaixonado por tecnologia e inovação, com forte inclinação para as áreas de Infraestrutura e Back-end. Tenho experiência em resolução de conflitos de infraestrutura, gestão de servidores e atuação como Scrum Master.
+O projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 
-🎓 Formação: Técnico em Informática para Internet (IFSP) e Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul).
+* **HTML5**
+* **CSS3** (com transições, gradientes customizados e responsividade)
+* **Tailwind CSS** (via CDN para estilização rápida)
+* **TypeScript / JavaScript** (para interatividade e animações, como o carrossel)
+* **Font Awesome** (para ícones)
+* **Google Fonts** (família tipográfica *Poppins*)
 
-💼 Perfil: Autonomia técnica, trabalho em equipa e foco em entrega de valor ao cliente.
-
-🚀 Tecnologias Utilizadas no Portfólio
-
-Este site foi construído focando em performance, responsividade e design moderno utilizando:
-
-HTML5 estruturado e semântico.
-
-Tailwind CSS (via CDN) para estilização rápida e responsiva.
-
-CSS3 (Customizado) para animações avançadas (como o carrossel infinito) e gradientes de tags.
-
-TypeScript / JavaScript para interatividade.
-
-Font Awesome para ícones.
-
-🛠️ Habilidades e Stack Tecnológico
-
-No meu dia a dia e nos projetos apresentados, utilizo as seguintes tecnologias:
-
-Linguagens & Frameworks: PHP, Java, C#, .NET (MVC), Python, JavaScript, TypeScript.
-
-Front-end: HTML, CSS, Bootstrap, Tailwind CSS, jQuery.
-
-Infraestrutura & Banco de Dados: Docker, MySQL.
-
-📂 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 Abaixo está a organização de pastas e arquivos do repositório:
 
+```
 Portifolio
- ├── index.html                  # Página principal do portfólio
- ├── README.md                   # Documentação do projeto
- └── assets/
-     ├── css/
-     │   └── style.css           # Estilos customizados (tags e gradientes)
-     ├── curriculo/
+ ├── index.html
+ ├── README.md
+ └── assets
+     ├── css
+     │   └── style.css
+     ├── curriculo
      │   └── Curriculo_Paulo_Thomaz_Filho.docx
-     └── images/                 # Ícones das tecnologias e prints dos projetos
+     └── images
          ├── bootstrap.png
          ├── FRSemijoias.jpeg
          ├── Grua360.png
          └── ...
-      
+```
+## 💻 Projetos em Destaque
 
+### 1. FR Semijoias - E-commerce Completo
+Projeto desenvolvido para otimizar a gestão, venda e publicação de produtos de uma cliente real.
+* **Atuação:** Desenvolvedor Back-end e Scrum Master. Liderança de equipe e entrega de ponta a ponta.
+* **Tecnologias:** PHP, jQuery, Tailwind, Docker.
+* **Destaque:** Integração direta com a API do Mercado Pago.
 
-💻 Projetos em Destaque
+### 2. Grua 360 - Sistema de Gerenciamento
+Sistema estruturado para o gerenciamento de máquinas de pelúcia (*claw machines*).
+* **Foco:** Controle operacional, boas práticas de Programação Orientada a Objetos (POO) e arquitetura estruturada.
+* **Tecnologias:** C#, .NET (MVC), Bootstrap.
 
-💎 FR Semijoias - E-commerce Completo
+## 📚 Projetos Pessoais e de Estudo
 
-Plataforma de gestão e vendas com integração ao Mercado Pago. Atuei como Desenvolvedor Back-end e Scrum Master.
-Tecnologias: PHP, jQuery, Tailwind, Docker.
+* **Gestão de Estacionamento:** Gerenciamento de rede de estacionamentos, controle de vagas e caixa. *(PHP, JavaScript, Bootstrap)*
+* **Plataforma Escolar:** Gerenciamento de alunos, disciplinas e notas estruturadas. *(Python, MySQL)*
+* **Jogo Desktop:** Estudo aprofundado de Programação Orientada a Objetos. *(Java)*
 
-🕹️ Grua 360 - Sistema de Gerenciamento
+## 📞 Contato
 
-Sistema estruturado para controle operacional de máquinas de pelúcia utilizando boas práticas de POO.
-Tecnologias: C#, .NET (MVC), Bootstrap.
+Fique à vontade para entrar em contato comigo:
 
-(Confira a seção de projetos pessoais no site para ver mais trabalhos desenvolvidos em Java, Python e mais!)
-
-⚙️ Como executar o projeto localmente
-
-Como o projeto utiliza tecnologias client-side (HTML/CSS/JS) e Tailwind via CDN, não é necessário nenhum processo complexo de build.
-
-Faça o clone deste repositório:
-
-git clone https://github.com/Paulo-Thomaz-Filho/nome-do-repositorio.git
-
-
-Navegue até a pasta do projeto:
-
-cd nome-do-repositorio
-
-
-Abra o arquivo index.html diretamente no seu navegador ou utilize a extensão Live Server (do VS Code) para uma melhor experiência de desenvolvimento.
-
-📞 Contatos
-
-Fique à vontade para entrar em contato comigo para oportunidades, parcerias ou networking!
-
-✉️ E-mail: thomazfilhop@gmail.com
-
-💼 LinkedIn: linkedin.com/in/paulothomazfilho
-
-🐙 GitHub: github.com/Paulo-Thomaz-Filho
-
-Feito com ☕ e dedicação por Paulo Thomaz Filho.
+* **E-mail:** [thomazfilhop@gmail.com](mailto:thomazfilhop@gmail.com)
+* **LinkedIn:** [linkedin.com/in/paulothomazfilho](https://linkedin.com/in/paulothomazfilho)
+* **GitHub:** [github.com/Paulo-Thomaz-Filho](https://github.com/Paulo-Thomaz-Filho)
