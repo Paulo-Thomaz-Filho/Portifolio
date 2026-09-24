@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Configuração do Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C47623',
+                        bgMain: '#352323',
+                        bgFooter: '#221616',
+                        cardBg: '#2b1c1c',
+                        glassHover: 'rgba(196, 118, 35, 0.15)'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'carousel': 'rolarCarrossel 15s linear infinite',
+                    },
+                    keyframes: {
+                        rolarCarrossel: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/ts/script.ts" defer></script>
+    <link rel="icon" href="../assets/images/icon-page.png" type="image/x-icon">
+</head>
+
+<body class="bg-bgMain text-white font-poppins overflow-x-hidden">
+
+    <!-- Header & Navegação -->
+    <header class="sticky top-0 z-50 bg-[#352323]/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="w-12 h-12 bg-[url('../images/icon-page.png')] bg-contain bg-no-repeat"></div>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-white/80 hover:text-primary transition-colors duration-300 font-medium">Início</a>
+                <a href="experiencia.html" class="text-white/80 hover:text-primary transition-colors duration-300 font-medium">Experiências</a>
+                <a href="formação.html" class="text-white/80 hover:text-primary transition-colors duration-300 font-medium">Formação</a>
+                <a href="#contatos" class="text-white/80 hover:text-primary transition-colors duration-300 font-medium">Contatos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-[#160f0f]">
+        
+        <!-- Seção Sobre -->
+        <section id="sobre" class="container mx-auto px-6 py-20 flex flex-col lg:flex-row gap-8">
+            <div class="lg:w-1/2 bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all duration-300">
+                <h2 class="text-3xl font-bold mb-4">Olá, eu sou o Paulo Thomaz Filho</h2>
+                <p class="text-gray-200">Sou um desenvolvedor full-stack apaixonado por tecnologia e inovação. E estou sempre à procura de novas oportunidades de me desenvolver e contribuir para projetos desafiadores.</p>
+            </div>
+            
+            <div class="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all duration-300 flex items-center justify-center min-h-[200px]">
+                    <h2 class="font-semibold text-lg">Imagem Grande</h2>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 flex-1 flex items-center justify-center hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all duration-300">
+                        <h4 class="font-medium">Imagem Média 1</h4>
+                    </div>
+                    <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 flex-1 flex items-center justify-center hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all duration-300">
+                        <h4 class="font-medium">Imagem Média 2</h4>
+                    </div>
+                </div>                    
+            </div>
+        </section>
+
+        <hr class="border-white/10 mx-6">
+
+        <!-- Seção Projetos -->
+        <section id="projetos" class="container mx-auto px-6 py-20">
+            <h2 class="text-3xl font-bold mb-10 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-1 after:bg-primary after:rounded-full">Projetos</h2>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-2">Projetos Reais</h3>
+                <p class="text-gray-400 mb-8">Aplicações em produção, lidando com regras de negócio, integrações e infraestrutura.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Projeto Card 1 -->
+                    <div class="bg-cardBg rounded-xl p-6 shadow-lg flex flex-col gap-4 border border-white/5">
+                        <div class="w-full h-44 bg-[#462d2d]/35 rounded-lg border border-white/5 object-cover"></div>
+                        <h3 class="text-xl font-semibold">E-commerce Completo</h3>
+                        <p class="text-gray-300 text-sm flex-1">Plataforma de vendas com integração Mercado Pago, serviço SMTP e ambiente conteinerizado.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="tag tag-php">PHP</span>
+                            <span class="tag tag-jquery">jQuery</span>
+                            <span class="tag tag-tailwind">Tailwind</span>
+                            <span class="tag tag-docker">Docker</span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <button class="flex-1 py-2 px-4 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold"><i class="fa-solid fa-circle-info mr-2"></i>Detalhes</button>
+                            <a href="https://github.com/paulo-thomaz-filho/fr_semijoias" class="flex-1 text-center py-2 px-50 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold" target="_blank"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
+                            <a href="#" class="flex-1 text-center py-2 px-50 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Acessar</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Card 2 -->
+                    <div class="bg-cardBg rounded-xl p-6 shadow-lg flex flex-col gap-4 border border-white/5">
+                        <div class="w-full h-44 bg-[#462d2d]/35 rounded-lg border border-white/5 object-cover"></div>
+                        <h3 class="text-xl font-semibold">Plataforma de Assinaturas</h3>
+                        <p class="text-gray-300 text-sm flex-1">Desenvolvimento em equipe de um sistema de assinaturas com cobrança recorrente (Mercado Pago).</p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="tag tag-csharp">C#</span>
+                            <span class="tag tag-dotnet">.NET Core</span>
+                            <span class="tag tag-bootstrap">Bootstrap</span>
+                            <span class="tag tag-docker">Docker</span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <button class="flex-1 py-2 px-4 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold"><i class="fa-solid fa-circle-info mr-2"></i>Detalhes</button>
+                            <a href="#" class="flex-1 text-center py-2 px-50 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold" target="_blank"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
+                            <a href="#" class="flex-1 text-center py-2 px-50 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Acessar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-white/10 my-12">
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">Projetos Pessoais e de Estudo</h3>
+                <p class="text-gray-400 mb-8">Experimentos, estudos de arquitetura e novas tecnologias.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Projeto Pessoal 1 -->
+                    <div class="bg-cardBg rounded-xl p-6 shadow-lg flex flex-col gap-4 border border-white/5">
+                        <div class="w-full h-44 bg-[#462d2d]/35 rounded-lg border border-white/5 object-cover"></div>
+                        <h3 class="text-xl font-semibold">Gestão de Estacionamento</h3>
+                        <p class="text-gray-300 text-sm flex-1">Sistema completo para gerenciamento de rede de estacionamentos, controle de vagas e caixa.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="tag tag-php">PHP</span>
+                            <span class="tag tag-js">JavaScript</span>
+                            <span class="tag tag-jquery">jQuery</span>
+                            <span class="tag tag-bootstrap">Bootstrap</span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <button class="flex-1 py-2 px-4 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold"><i class="fa-solid fa-circle-info mr-2"></i>Detalhes</button>
+                            <a href="#" class="flex-1 text-center py-2 px-4 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold" target="_blank"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Pessoal 2 -->
+                    <div class="bg-cardBg rounded-xl p-6 shadow-lg flex flex-col gap-4 border border-white/5">
+                        <div class="w-full h-44 bg-[#462d2d]/35 rounded-lg border border-white/5 object-cover"></div>
+                        <h3 class="text-xl font-semibold">Plataforma Escolar</h3>
+                        <p class="text-gray-300 text-sm flex-1">Projeto em desenvolvimento focado no gerenciamento de alunos, disciplinas e notas.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-mysql">MySQL</span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <button class="flex-1 py-2 px-4 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold"><i class="fa-solid fa-clock mr-2"></i>Em Breve</button>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Pessoal 3 -->
+                    <div class="bg-cardBg rounded-xl p-6 shadow-lg flex flex-col gap-4 border border-white/5">
+                        <div class="w-full h-44 bg-[#462d2d]/35 rounded-lg border border-white/5 object-cover"></div>
+                        <h3 class="text-xl font-semibold">Jogo Desktop</h3>
+                        <p class="text-gray-300 text-sm flex-1">Projeto focado no estudo aprofundado de Programação Orientada a Objetos.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="tag tag-java">Java</span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <button class="flex-1 py-2 px-4 border border-primary text-white rounded-lg hover:bg-primary transition-colors text-sm font-semibold"><i class="fa-solid fa-clock mr-2"></i>Em Breve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Habilidades (Carrossel Completo) -->
+        <section id="habilidades" class="py-10 bg-[#462d2d]/20 border-y border-white/10 overflow-hidden">
+            <h2 class="text-3xl font-bold text-center mb-10">Habilidades</h2>
+            <div class="w-full relative group">
+                <div class="flex w-max animate-carousel group-hover:[animation-play-state:paused]">
+                    <!-- Bloco Original de Imagens -->
+                    <img src="../assets/images/bootstrap.png" alt="Bootstrap" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/c.png" alt="C" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/css.png" alt="CSS3" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/docker.png" alt="Docker" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/dotnet.png" alt=".NET" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/html.png" alt="HTML5" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/java.png" alt="Java" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/php.png" alt="PHP" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/python.png" alt="Python" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/script-java.png" alt="JavaScript" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/tailwind.png" alt="Tailwind CSS" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/typescript.png" alt="TypeScript" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    
+                    <!-- Cópia exata para o loop fluido -->
+                    <img src="../assets/images/bootstrap.png" alt="Bootstrap" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/c.png" alt="C" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/css.png" alt="CSS3" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/docker.png" alt="Docker" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/dotnet.png" alt=".NET" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/html.png" alt="HTML5" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/java.png" alt="Java" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/php.png" alt="PHP" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/python.png" alt="Python" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/script-java.png" alt="JavaScript" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/tailwind.png" alt="Tailwind CSS" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                    <img src="../assets/images/typescript.png" alt="TypeScript" class="h-16 w-auto mx-8 grayscale-[30%] hover:grayscale-0 hover:brightness-125 transition-all cursor-pointer">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Certificados -->
+        <section id="certificados" class="container mx-auto px-6 py-20">
+            <h2 class="text-3xl font-bold mb-10 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-1 after:bg-primary after:rounded-full">Certificados</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">    
+                <!-- Cards de Certificado -->
+                <!-- Repetindo o formato para os 6 cartões -->
+                <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] hover:border-[#c47623]/30 transition-all duration-300">
+                    <h4 class="text-xl font-semibold mb-2">asd</h4>
+                    <p class="text-gray-300 mb-4">Desc do Certificado</p>
+                    <a href="#" class="inline-block py-2 px-5 border border-primary text-white rounded-lg hover:bg-primary hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all text-sm font-medium"><i class="fa-solid fa-certificate mr-2"></i>Abrir Certificado</a>
+                </div>
+                
+                <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] hover:border-[#c47623]/30 transition-all duration-300">
+                    <h4 class="text-xl font-semibold mb-2">asd</h4>
+                    <p class="text-gray-300 mb-4">Desc do Certificado</p>
+                    <a href="#" class="inline-block py-2 px-5 border border-primary text-white rounded-lg hover:bg-primary hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all text-sm font-medium"><i class="fa-solid fa-certificate mr-2"></i>Abrir Certificado</a>
+                </div>
+                
+                <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] hover:border-[#c47623]/30 transition-all duration-300">
+                    <h4 class="text-xl font-semibold mb-2">asd</h4>
+                    <p class="text-gray-300 mb-4">Desc do Certificado</p>
+                    <a href="#" class="inline-block py-2 px-5 border border-primary text-white rounded-lg hover:bg-primary hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all text-sm font-medium"><i class="fa-solid fa-certificate mr-2"></i>Abrir Certificado</a>
+                </div>
+                
+                <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] hover:border-[#c47623]/30 transition-all duration-300">
+                    <h4 class="text-xl font-semibold mb-2">asd</h4>
+                    <p class="text-gray-300 mb-4">Desc do Certificado</p>
+                    <a href="#" class="inline-block py-2 px-5 border border-primary text-white rounded-lg hover:bg-primary hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all text-sm font-medium"><i class="fa-solid fa-certificate mr-2"></i>Abrir Certificado</a>
+                </div>
+                
+                <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] hover:border-[#c47623]/30 transition-all duration-300">
+                    <h4 class="text-xl font-semibold mb-2">asd</h4>
+                    <p class="text-gray-300 mb-4">Desc do Certificado</p>
+                    <a href="#" class="inline-block py-2 px-5 border border-primary text-white rounded-lg hover:bg-primary hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all text-sm font-medium"><i class="fa-solid fa-certificate mr-2"></i>Abrir Certificado</a>
+                </div>
+                
+                <div class="bg-[#462d2d]/35 backdrop-blur-md border border-white/5 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] hover:border-[#c47623]/30 transition-all duration-300">
+                    <h4 class="text-xl font-semibold mb-2">asd</h4>
+                    <p class="text-gray-300 mb-4">Desc do Certificado</p>
+                    <a href="#" class="inline-block py-2 px-5 border border-primary text-white rounded-lg hover:bg-primary hover:shadow-[0_10px_25px_rgba(196,118,35,0.15)] transition-all text-sm font-medium"><i class="fa-solid fa-certificate mr-2"></i>Abrir Certificado</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-bgFooter border-t border-white/10 py-12 text-center">
+        <div id="contatos" class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-6">Contatos</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-10 text-gray-300">
+                <a href="mailto:thomazfilhop@gmail.com" class="hover:text-primary transition-colors flex items-center gap-2"><i class="fa-solid fa-envelope text-xl"></i> thomazfilhop@gmail.com</a>
+                <a href="https://www.linkedin.com/in/paulo-thomaz-filho" target="_blank" class="hover:text-primary transition-colors flex items-center gap-2"><i class="fa-brands fa-linkedin text-xl"></i> linkedin.com/in/paulothomazfilho</a>
+                <a href="https://github.com/paulo-thomaz-filho" target="_blank" class="hover:text-primary transition-colors flex items-center gap-2"><i class="fa-brands fa-github text-xl"></i> github.com/paulothomazfilho</a>
+            </div>
+            <span class="block text-sm text-gray-500 border-t border-white/5 pt-6">© 2026 Paulo Thomaz Filho. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+</body>
+</html>
