@@ -1,0 +1,28 @@
+.tag {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.tag-html        { background: linear-gradient(135deg, #e44d26, #f16529); }
+.tag-css         { background: linear-gradient(135deg, #264de4, #2965f1); }
+.tag-js          { background: linear-gradient(135deg, #f0db4f, #e5a228); }
+.tag-php         { background: linear-gradient(135deg, #5a17b7, #a334b2); }
+.tag-docker      { background: linear-gradient(135deg, #0db7ed, #0a14c9); }
+.tag-mysql       { background: linear-gradient(135deg, #00758f, #00618a); }
+.tag-python      { background: linear-gradient(135deg, #306998, #ffd43b); }
+.tag-java        { background: linear-gradient(135deg, #b07219, #f89820); }
+.tag-csharp      { background: linear-gradient(135deg, #178600, #239120); }
+.tag-dotnet      { background: linear-gradient(135deg, #512bd4, #6842e3); }
+.tag-git         { background: linear-gradient(135deg, #f34f29, #e94e31); }
+.tag-jquery      { background: linear-gradient(135deg, #0868ac, #0e76bd); }
+.tag-bootstrap   { background: linear-gradient(135deg, #563d7c, #7952b3); }
+.tag-tailwind    { background: linear-gradient(135deg, #38b2ac, #559731); }
+.tag-typescript  { background: linear-gradient(135deg, #3178c6, #2b78c2); }
+
+a {
+    text-decoration: none;
+}
