@@ -1,28 +1,254 @@
-.tag {
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #ffffff;
-    letter-spacing: 0.5px;
+/* =======================================
+   Paleta de Cores: Dark Coffee & Caramel
+   ======================================= */
+:root {
+    --bg-deep: #170d02;      /* Fundo principal mais escuro */
+    --bg-card: #2b1b0b;      /* Fundo de cards e blocos */
+    --border-dark: #271a0d;  /* Bordas sutis */
+    --accent-dark: #4a2707;  /* Hover de botões e destaques */
+    --text-muted: #c67300;   /* Textos secundários / Parágrafos */
+    --text-light: #f1e7da;   /* Títulos e textos em destaque */
 }
 
-.tag-html        { background: linear-gradient(135deg, #e44d26, #f16529); }
-.tag-css         { background: linear-gradient(135deg, #264de4, #2965f1); }
-.tag-js          { background: linear-gradient(135deg, #f0db4f, #e5a228); }
-.tag-php         { background: linear-gradient(135deg, #5a17b7, #a334b2); }
-.tag-docker      { background: linear-gradient(135deg, #0db7ed, #0a14c9); }
-.tag-mysql       { background: linear-gradient(135deg, #00758f, #00618a); }
-.tag-python      { background: linear-gradient(135deg, #306998, #ffd43b); }
-.tag-java        { background: linear-gradient(135deg, #b07219, #f89820); }
-.tag-csharp      { background: linear-gradient(135deg, #178600, #239120); }
-.tag-dotnet      { background: linear-gradient(135deg, #512bd4, #6842e3); }
-.tag-git         { background: linear-gradient(135deg, #f34f29, #e94e31); }
-.tag-jquery      { background: linear-gradient(135deg, #0868ac, #0e76bd); }
-.tag-bootstrap   { background: linear-gradient(135deg, #563d7c, #7952b3); }
-.tag-tailwind    { background: linear-gradient(135deg, #38b2ac, #559731); }
-.tag-typescript  { background: linear-gradient(135deg, #3178c6, #2b78c2); }
+/* =======================================
+   Tipografia e Reset Geral
+   ======================================= */
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .section-title {
+    font-family: 'Playfair Display', serif;
+}
 
 a {
     text-decoration: none;
+}
+
+/* Cores de Texto Utilitárias */
+.text-light-green { color: var(--text-light) !important; }
+.text-accent { color: var(--text-muted) !important; }
+.text-muted-green { color: var(--text-muted) !important; opacity: 0.8; }
+
+/* =======================================
+   Navegação (Navbar Glassmorphism)
+   ======================================= */
+.custom-navbar {
+    background-color: rgba(23, 13, 2, 0.8) !important; /* Baseado em #170d02 */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--text-light) !important;
+}
+
+/* =======================================
+   Hero Section e Glass Cards
+   ======================================= */
+.hero-section {
+    position: relative;
+    padding-top: 80px;
+}
+
+/* Fundo borrado abstrato para dar o "glow" sutil do print */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--accent-dark) 0%, transparent 70%);
+    opacity: 0.4;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.glass-card {
+    background: linear-gradient(145deg, rgba(43, 27, 11, 0.6), rgba(23, 13, 2, 0.9)); /* Baseado em #2b1b0b e #170d02 */
+    border: 1px solid var(--border-dark);
+    backdrop-filter: blur(10px);
+}
+
+/* =======================================
+   Botões Customizados
+   ======================================= */
+.btn-custom {
+    background-color: var(--accent-dark);
+    color: var(--text-light);
+    border: 1px solid var(--border-dark);
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--text-muted);
+    color: var(--bg-deep);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--accent-dark);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent-dark);
+    color: var(--text-light);
+}
+
+/* =======================================
+   Títulos de Seção
+   ======================================= */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--text-muted);
+}
+
+.border-y-custom {
+    border-top: 1px solid var(--border-dark);
+    border-bottom: 1px solid var(--border-dark);
+    background-color: rgba(43, 27, 11, 0.3); /* Baseado em #2b1b0b */
+}
+
+.border-top-custom {
+    border-top: 1px solid var(--border-dark);
+}
+
+/* =======================================
+   Cards de Projetos
+   ======================================= */
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-dark);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--bg-deep);
+    position: relative;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    mix-blend-mode: luminosity;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.project-card:hover .card-img-wrapper img {
+    opacity: 1;
+    transform: scale(1.05);
+    mix-blend-mode: normal;
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+/* =======================================
+   Tags (Habilidades nos Projetos)
+   ======================================= */
+.tag-custom {
+    background-color: var(--border-dark);
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border: 1px solid var(--accent-dark);
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* =======================================
+   Carrossel de Tecnologias
+   ======================================= */
+.carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll 25s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-track img {
+    height: 75px;
+    margin: 0 40px;
+    padding: 5px;
+    /* Filtro para deixar a imagem com o tom Off White (#f1e7da) e levemente opaca */
+    filter: saturate(100%) sepia(8%) saturate(928%) brightness(105%) contrast(92%) opacity(0.6);
+    transition: filter 0.4s ease, transform 0.4s ease;
+    cursor: pointer;
+}
+
+.carousel-track img:hover {
+    /* Filtro calculado para transformar a cor do ícone no tom Caramelo (#c67300) */
+    filter: brightness(0) saturate(100%) invert(48%) sepia(76%) saturate(1900%) hue-rotate(7deg) brightness(95%) contrast(100%);
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =======================================
+   Footer & Links Sociais
+   ======================================= */
+.social-link {
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--text-light);
 }
